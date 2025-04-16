@@ -19,7 +19,7 @@ export default function Payments() {
                     className="border rounded-md px-1 cursor-pointer" 
                     onClick={() => {
                         createPaymentStripeCheckout({
-                            testeId: 123,
+                            testeId: "123",
                         })
                 }}>
                     Criar Pagamento Stripe
@@ -29,7 +29,7 @@ export default function Payments() {
                     className="border rounded-md px-1 cursor-pointer" 
                     onClick={() => {
                         createSubscriptionStripeCheckout({
-                            testeId: 123,
+                            testeId: "123",
                         })
                 }}>
                     Criar Assinatura Stripe
