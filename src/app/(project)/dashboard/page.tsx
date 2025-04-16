@@ -1,5 +1,6 @@
 import { handleAuth } from "@/app/actions/handle-auth"
 import { auth } from "@/app/lib/auth"
+import Link from "next/link"
 import { redirect } from "next/navigation"
 
 export default async function Dashboard() {
@@ -22,10 +23,16 @@ export default async function Dashboard() {
             {
                 session?.user?.email && (
                     <form action={handleAuth}>
-                        <button type="submit" className="mb-10 border rounded-md px-2 py-1 cursor-pointer">Logout</button>
+                        <button type="submit" className="mb-10 border rounded-md px-2 py-1 cursor-pointer">
+                            Logout
+                        </button>
                     </form>
                 )
             }
+
+            <Link href="/payments" className="border rounded-md px-2 py-1 cursor-pointer">
+                Pagamentos
+            </Link>
         </div>
     )
 }
