@@ -29,7 +29,7 @@ export default function useMercadoPago() {
         }
     }
 
-    return (
-        createMercadoPagoCheckout
-    )
+    return {   
+        createMercadoPagoCheckout,
+    }
 }

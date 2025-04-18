@@ -11,7 +11,7 @@ export default function Payments() {
         handleCreateStripePortal
     } = useStripe()
 
-    const createMercadoPagoCheckout = useMercadoPago()
+    const { createMercadoPagoCheckout } = useMercadoPago()
 
     return (
         <div className="flex flex-col gap-10 items-center justify-center h-screen">
