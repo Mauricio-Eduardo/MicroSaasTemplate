@@ -17,7 +17,7 @@ export async function GET(request: NextRequest) {
     const paymentData = await payment.get({id: paymentId})
 
     if (paymentData.status === "approved" || paymentData.date_approved !== null) {
-        return NextResponse.redirect(new URL(`success`, request.url))
+        return NextResponse.redirect(new URL(`/success`, request.url))
     }
 
     return NextResponse.redirect(new URL(`/`, request.url))
